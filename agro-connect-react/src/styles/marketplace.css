@@ -1,0 +1,57 @@
+/* AGRO CONNECT — marketplace, crop cards, crop detail */
+
+.market-layout { display: grid; grid-template-columns: 268px 1fr; gap: var(--sp-5); align-items: start; }
+.filters { position: sticky; top: calc(var(--header-h) + var(--sp-4)); display: grid; gap: var(--sp-4); }
+.filter-group { border-bottom: 1px solid var(--border); padding-bottom: var(--sp-4); }
+.filter-group:last-child { border-bottom: 0; padding-bottom: 0; }
+.filter-group h4 { font-family: var(--font-body); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin-bottom: var(--sp-3); }
+
+.search-bar { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
+.search-bar input[type="search"] { flex: 1; min-width: 200px; }
+
+.crop-grid { display: grid; gap: var(--sp-4); grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); }
+.crop-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.crop-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.crop-media { position: relative; aspect-ratio: 4 / 3; background: var(--surface-alt); }
+.crop-media img { width: 100%; height: 100%; object-fit: cover; }
+.crop-media .tags { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.crop-media .save {
+  position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; border-radius: 50%;
+  border: 0; background: rgba(255,255,255,.92); cursor: pointer; display: grid; place-items: center;
+}
+.crop-body { padding: var(--sp-4); display: grid; gap: 8px; flex: 1; }
+.crop-body h3 { margin: 0; font-size: var(--fs-lg); }
+.crop-variety { font-size: var(--fs-xs); color: var(--text-muted); }
+.crop-price { font-family: var(--font-display); font-size: var(--fs-xl); color: var(--primary-dark); }
+.crop-price small { font-size: var(--fs-xs); color: var(--text-muted); font-family: var(--font-body); }
+.crop-meta { display: grid; gap: 4px; font-size: var(--fs-xs); color: var(--text-muted); }
+.crop-farmer { display: flex; gap: 8px; align-items: center; border-top: 1px solid var(--border); padding-top: 10px; margin-top: auto; }
+.crop-farmer .avatar { width: 30px; height: 30px; font-size: var(--fs-xs); }
+.crop-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 var(--sp-4) var(--sp-4); }
+
+/* Crop detail */
+.detail-layout { display: grid; grid-template-columns: 1.35fr .65fr; gap: var(--sp-5); align-items: start; }
+.gallery-main { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); aspect-ratio: 16/10; background: var(--surface-alt); }
+.gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-thumbs { display: flex; gap: 10px; margin-top: var(--sp-3); flex-wrap: wrap; }
+.gallery-thumbs button { width: 84px; aspect-ratio: 1; border-radius: var(--radius-md); overflow: hidden; border: 2px solid transparent; padding: 0; cursor: pointer; background: none; }
+.gallery-thumbs button[aria-current="true"] { border-color: var(--primary); }
+.gallery-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+.buy-box { position: sticky; top: calc(var(--header-h) + var(--sp-4)); display: grid; gap: var(--sp-3); }
+
+/* Farmer directory */
+.farmer-card { display: flex; gap: var(--sp-4); align-items: flex-start; }
+.farmer-card .avatar { width: 58px; height: 58px; }
+
+/* Order summary */
+.summary-line { display: flex; justify-content: space-between; font-size: var(--fs-sm); padding: 6px 0; }
+.summary-line.total { border-top: 1px solid var(--border); margin-top: 6px; padding-top: 12px; font-family: var(--font-display); font-size: var(--fs-lg); }
+
+/* Negotiation */
+.offer { border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--sp-3) var(--sp-4); background: var(--surface); font-size: var(--fs-sm); max-width: 78%; }
+.offer.mine { margin-left: auto; border-color: var(--primary); background: var(--primary-light); }
+.offer .amount { font-family: var(--font-display); font-size: var(--fs-lg); color: var(--primary-dark); }

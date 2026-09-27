@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+agro_connect.db
+.venv/
+venv/

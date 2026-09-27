@@ -1,0 +1,80 @@
+/* ==========================================================================
+   AGRO CONNECT — Design tokens
+   Single source of truth for colour, spacing, radius, shadow, typography.
+   Never hard-code a colour anywhere else in the project.
+   ========================================================================== */
+
+:root {
+  /* Brand */
+  --primary: #1f7a3f;
+  --primary-dark: #14562b;
+  --primary-light: #e6f4ea;
+  --accent: #d98324;
+  --accent-light: #fdf1e2;
+
+  /* Surfaces */
+  --background: #f6f8f5;
+  --surface: #ffffff;
+  --surface-alt: #eef2ec;
+  --surface-invert: #10231a;
+
+  /* Text */
+  --text: #14201a;
+  --text-muted: #5d6b62;
+  --text-invert: #f2f7f3;
+
+  /* Lines */
+  --border: #dbe3dc;
+  --border-strong: #c2cec4;
+
+  /* Status */
+  --success: #2e9e57;
+  --success-light: #e4f6ea;
+  --warning: #c9871a;
+  --warning-light: #fdf3e0;
+  --danger: #c2453b;
+  --danger-light: #fbe9e7;
+  --info: #2a6fb0;
+  --info-light: #e7f1fa;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px rgba(20, 32, 26, 0.06), 0 1px 3px rgba(20, 32, 26, 0.05);
+  --shadow-md: 0 4px 14px rgba(20, 32, 26, 0.08);
+  --shadow-lg: 0 18px 46px rgba(20, 32, 26, 0.14);
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 72px;
+
+  /* Type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2.25rem;
+  --fs-4xl: clamp(2.2rem, 5vw, 3.6rem);
+
+  /* Layout */
+  --container: 1200px;
+  --header-h: 68px;
+  --sidebar-w: 250px;
+  --sidebar-collapsed-w: 68px;
+  --bottomnav-h: 62px;
+  --transition: 160ms ease;
+}

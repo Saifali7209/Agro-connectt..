@@ -1,0 +1,52 @@
+/*
+ * AGRO CONNECT — the only stylesheet added by the React migration.
+ *
+ * Deliberately small. It does two things and nothing else:
+ *   1. Makes the #root wrapper transparent to the existing layout rules, which
+ *      previously applied to direct children of <body>.
+ *   2. Adds the two .state variants (info, success) that the original CSS never
+ *      needed because those messages used to be toasts. They reuse the existing
+ *      design tokens, so they match the rest of the interface.
+ *
+ * No colour, spacing, type or component rule from the original build is
+ * overridden here.
+ */
+
+/* 1 — #root must not introduce a new layout context. */
+#root {
+  display: contents;
+}
+
+/* Fallback for browsers without display:contents on a flex/grid ancestor. */
+@supports not (display: contents) {
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 2 — informational and success variants of the existing .state block. */
+.state.info {
+  border-color: var(--primary);
+  background: var(--primary-light, rgba(46, 125, 50, .08));
+  color: var(--text);
+}
+
+.state.success {
+  border-color: var(--primary);
+  background: var(--primary-light, rgba(46, 125, 50, .08));
+  color: var(--primary-dark, var(--primary));
+}
+
+.state.info,
+.state.success,
+.state.error {
+  margin-bottom: var(--sp-3);
+  text-align: left;
+}
+
+/* Keep inline field errors tight under their input. */
+.field .error-text {
+  margin-top: 4px;
+}
